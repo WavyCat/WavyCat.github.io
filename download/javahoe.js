@@ -12,12 +12,8 @@ window.onload = function(){
 		}
 		lel.appendChild(img1);
 	}
-	function loop() {
-		window.setInterval(hehe,100);
-	}
 	
-	loop();
-
+	window.setInterval(hehe,100);
 }
 
 
