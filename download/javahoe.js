@@ -16,7 +16,7 @@ window.onload = function(){
 		window.setTimeout(hehe,100);
 	}
 	
-	img1.addEventListener("mouseover",loop);
+	loop;
 
 }
 
