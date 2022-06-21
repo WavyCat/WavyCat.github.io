@@ -1,0 +1,21 @@
+h1 {
+	color: red;
+	text-align:center;
+	font-size: 4vw;
+}
+
+.bra{
+	color: white;
+	text-align:center;
+	font-size: 2vw;
+}
+
+.lel{
+	color: white;
+	text-align:center;
+	font-size: 4vw;
+}
+
+body {
+	background-color: black;
+}
