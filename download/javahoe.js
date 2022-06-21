@@ -16,7 +16,7 @@ window.onload = function(){
 		window.setInterval(hehe,100);
 	}
 	
-	loop;
+	loop();
 
 }
 
