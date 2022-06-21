@@ -13,7 +13,7 @@ window.onload = function(){
 		lel.appendChild(img1);
 	}
 	function loop() {
-		window.setTimeout(hehe,100);
+		window.setInterval(hehe,100);
 	}
 	
 	loop;
