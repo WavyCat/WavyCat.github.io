@@ -7,7 +7,7 @@ window.onload = function(){
 			x-=1;
 		} else if (x == -1){
 			coun.innerHTML = "";
-			location.href="file:///C:/Users/maxku/Desktop/bruh/index.html";
+			location.href="index.html";
 		}
 	}
 	window.setInterval(counter,1000);
