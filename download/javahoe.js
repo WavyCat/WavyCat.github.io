@@ -13,7 +13,6 @@ window.onload = function(){
 		lel.appendChild(img1);
 	}
 	
-	window.setInterval(hehe,100);
 }
 
 
