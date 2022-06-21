@@ -7,7 +7,7 @@ window.onload = function(){
 			x-=1;
 		} else if (x == -1){
 			coun.innerHTML = "";
-			window.location.href="https://wavycat.github.io/download/index.html";
+			window.location.href="neman.html";
 		}
 	}
 	window.setInterval(counter,1000);
