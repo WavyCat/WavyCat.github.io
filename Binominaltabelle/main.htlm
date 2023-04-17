@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+		<script defer src="https://pyscript.net/latest/pyscript.js"></script> 
+	</head>
+		<body>
+			<p>
+				n= <input type="text" name="usern" id="n" size="6">
+				p=<input type="text" name="userp" id="p" size="6">
+				r=<input type="text" name="userr" id="r" size="6">
+				<input type="checkbox" name="userk" id="k"> kumuliert? 
+			</p>
+			<p id="ergebnis"></p>
+			<p>
+				<input type="button"  value="Berechnen" py-click="rechnen()">	
+			</p>
+		</body>
+	<py-script>
+import math
+
+def bin(n,k):
+    nf = math.factorial(n)
+    nk = math.factorial(k)
+    nkf = math.factorial((n-k))
+    return nf/(nk*nkf)
+
+def b(n,p,r):
+    return bin(n,r)*pow(p,r)*pow(1-p,n-r)
+
+def f(n,p,r):
+    ftotal = 0
+    for i in range(r+1):
+        ftotal += b(n,p,i)
+    return ftotal
+
+def rechnen():
+    n = int(Element("n").value)
+    p = float(Element("p").value)
+    r = int(Element("r").value)
+    k = js.document.querySelector("#k").checked
+
+    if k:
+        print("Kumulierte Wahrscheinlichkeit für n={}, p={} und r≤{}: ".format(n,p,r))
+        print(str(f(n,p,r)*100) + "%\n")
+    if not k :
+        print("Wahrscheinlichkeit für n={}, p={} und r={}: ".format(n,p,r))
+        print(str(b(n,p,r)*100) +" %\n")
+
+	</py-script>
+</html>
