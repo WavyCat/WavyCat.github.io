@@ -91,9 +91,9 @@ body {
 
 /* Footer */
 footer {
-	position: absolute;
-	font-size: 80%;
-	bottom: 0%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
 }
