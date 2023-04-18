@@ -4,15 +4,15 @@ body {
 	font-family: "Martel Sans";
 	font-style: normal;
 	text-align: center;
-	color: #046865;
+	color: #123740;
 	background: white;
 }
 
 /* Content */
 .fuckingfuck {
-	border: 2px solid #046865;
+	border: 2px solid #549aab;
 	border-radius: 4px;
-	background: whitesmoke;
+	background: #b0d7e1;
 	width: 80%;
 	padding: 2px 4px;
 	margin: 4px 0;
@@ -21,13 +21,14 @@ body {
 
 .fuckingfuck:focus {
 	outline: none;
-	border: 3px solid #21A0A0;
-	border-radius: 6px
+	border: 3px solid #f1802d;
+	border-radius: 6px;
+	background: #fad3b7;
 }
 
 .button {
-	background-color: #21A0A0;
-	border: 2px solid #046865;
+	background-color: #549aab;
+	border: 2px solid #123740;
 	border-radius: 4px;
 	width: 82%;
 	color: white;
@@ -36,13 +37,11 @@ body {
 }
 
 .container {
-	padding-left: 35px;
-	margin-bottom: 12px;
-	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
 }
 
 .container input {
-	position: absolute;
 	opacity: 0;
 	cursor: pointer;
 	height: 0;
@@ -50,9 +49,9 @@ body {
 }
 
 .checkmark {
-	border: 2px solid #046865;
+	border: 2px solid #123740;
 	border-radius: 4px;
-	position: absolute;
+	position: relative;
 	height: 25px;
 	width: 25px;
 	background-color: white;
@@ -64,12 +63,13 @@ body {
 }
 
 .container input:checked ~ .checkmark {
-	background-color: #21A0A0;
+	background-color: #f1802d;
+	border-color: #d7620f;
 }
 
 .checkmark:after {
+	position: relative;
 	content: "";
-	position: absolute;
 	display: none;
 }
 
