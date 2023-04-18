@@ -41,9 +41,9 @@ def rechnen():
 
     if k:
         print("Kumulierte Wahrscheinlichkeit für n={}, p={} und r≤{}: ".format(n,p,r))
-        print(str(f(n,p,r)*100) + "%\n")
+        print(str(round(f(n,p,r)*100, 8)) + "%\n")
     if not k :
         print("Wahrscheinlichkeit für n={}, p={} und r={}: ".format(n,p,r))
-        print(str(b(n,p,r)*100) +" %\n")
+        print(str(round(b(n,p,r)*100, 8)) +" %\n")
 	</py-script>
 </html>
