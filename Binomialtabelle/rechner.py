@@ -23,3 +23,5 @@ def rechnen():
 
     if k:
         Element("ergebnis").write("Du dummer Hs")
+    if not k:
+        Element("ergebnis").write("Du geiler Hs")
