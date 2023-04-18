@@ -21,8 +21,8 @@ body {
 
 .fuckingfuck:focus {
 	outline: none;
-	border: 3px solid #f1802d;
-	border-radius: 6px;
+	border: 2px solid #f1802d;
+	border-radius: 4px;
 	background: #fad3b7;
 }
 
