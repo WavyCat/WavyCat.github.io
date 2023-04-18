@@ -32,8 +32,8 @@ def rechnen():
         r = int(Element("r").value)
     except:
         Element("ergebnis").write("Bitte für r eine natürliche Zahl eingeben.", append=True)
-        
-    try:
+
+    else:
         k = js.document.querySelector("#k").checked
 
         Element("oldstable").write(Element("ergebnis"))
