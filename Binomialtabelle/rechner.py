@@ -16,12 +16,22 @@ def f(n,p,r):
     return ftotal
 
 def rechnen():
-    n = int(Element("n").value)
-    p = float(Element("p").value)
-    r = int(Element("r").value)
+    try:
+        n = int(Element("n").value)
+    except ValueError:
+        Element("ergebnis").write("Bitte für n eine natürliche Zahl eingeben.")
+    try:
+        p = float(Element("p").value)
+    except ValueError:
+        Element("ergebnis").write("Bitte für p eine Zahl x eingeben für die gilt 0≤x≤1.", append=True)
+    try:
+        r = int(Element("r").value)
+    except ValueError:
+        Element("ergebnis").write("Bitte für r eine natürliche Zahl eingeben.", append=True)
+
     k = js.document.querySelector("#k").checked
 
     if k:
-        Element("ergebnis").write("P(X ≤ "+str(r)+") = "+str(f(n,p,r)*100)+"%")
+        Element("ergebnis").write("(P ≤ "+str(r)+") = "+str(f(n,p,r)*100)+"%")
     if not k:
-        Element("ergebnis").write("P(X = "+str(r)+") = "+str(b(n,p,r)*100)+"%")
+        Element("ergebnis").write("(P = "+str(r)+") = "+str(b(n,p,r)*100)+"%")
