@@ -32,13 +32,14 @@ def rechnen():
         r = int(Element("r").value)
     except:
         Element("ergebnis").write("Bitte für r eine natürliche Zahl eingeben.", append=True)
+        
+    try:
+        k = js.document.querySelector("#k").checked
 
-    k = js.document.querySelector("#k").checked
+        Element("oldstable").write(Element("ergebnis"))
+        Element("oldoldstable").write(Element("oldstable"))
 
-    Element("oldstable").write(Element("ergebnis"))
-    Element("oldoldstable").write(Element("oldstable"))
-
-    if k:
-        Element("ergebnis").write("(P ≤ " + str(r) + ") = " + str(f(n, p, r) * 100) + "%")
-    if not k:
-        Element("ergebnis").write("(P = " + str(r) + ") = " + str(b(n, p, r) * 100) + "%")
+        if k:
+            Element("ergebnis").write("(P ≤ " + str(r) + ") = " + str(f(n, p, r) * 100) + "%")
+        if not k:
+            Element("ergebnis").write("(P = " + str(r) + ") = " + str(b(n, p, r) * 100) + "%")
