@@ -1,4 +1,4 @@
-#WavyCat.github.io
+# WavyCat.github.io
 
 * Binomialtabelle berechnet kumulierte (Fig.1) und unkumulierte (Fig.2) Wahrscheinlichkeiten
 
