@@ -22,6 +22,7 @@ def rechnen():
     k = js.document.querySelector("#k").checked
 
     if k:
-        Element("ergebnis").write("Du dummer Hs")
+        Element("ergebnis").write("$$\begin{multline*}{\hspace{1cm}} P(X \leqslant r) = \sum_{i=0}^r \binom{n}{i} p^i (1-p)^{n-i} \\
+Fig.1\end{multline*}$$")
     if not k:
         Element("ergebnis").write("Du geiler Hs")
