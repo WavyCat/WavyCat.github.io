@@ -10,7 +10,7 @@ $$
 
 $$
 \begin{multline*} 
-{\hspace{1cm}} P(X = r) = \binom{n}{k} p^r (1-p)^{n-r} \\
+{\hspace{1cm}} P(X = r) = \binom{n}{r} p^r (1-p)^{n-r} \\
 Fig.2
 \end{multline*} 
 $$
