@@ -15,36 +15,7 @@
 				<input type="button"  value="Berechnen" py-click="rechnen()">	
 			</p>
 		</body>
-	<py-script>
-import math
-
-def bin(n,k):
-    nf = math.factorial(n)
-    nk = math.factorial(k)
-    nkf = math.factorial((n-k))
-    return nf/(nk*nkf)
-
-def b(n,p,r):
-    return bin(n,r)*pow(p,r)*pow(1-p,n-r)
-
-def f(n,p,r):
-    ftotal = 0
-    for i in range(r+1):
-        ftotal += b(n,p,i)
-    return ftotal
-
-def rechnen():
-    n = int(Element("n").value)
-    p = float(Element("p").value)
-    r = int(Element("r").value)
-    k = js.document.querySelector("#k").checked
-
-    if k:
-        print("Kumulierte Wahrscheinlichkeit für n={}, p={} und r≤{}: ".format(n,p,r))
-        print(str(round(f(n,p,r)*100, 8)) + "%\n")
-    if not k :
-        print("Wahrscheinlichkeit für n={}, p={} und r={}: ".format(n,p,r))
-        print(str(round(b(n,p,r)*100, 8)) +" %\n")
+	<py-script src="rechner.py">
 	</py-script>
 </html>
 
