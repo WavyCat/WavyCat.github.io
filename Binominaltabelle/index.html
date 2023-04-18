@@ -40,9 +40,11 @@ def rechnen():
     k = js.document.querySelector("#k").checked
 
     if k:
+	print("\033[H\033[J", end="")
         print("Kumulierte Wahrscheinlichkeit für n={}, p={} und r≤{}: ".format(n,p,r))
         print(str(f(n,p,r)*100) + "%\n")
     if not k :
+	print("\033[H\033[J", end="")
         print("Wahrscheinlichkeit für n={}, p={} und r={}: ".format(n,p,r))
         print(str(b(n,p,r)*100) +" %\n")
 
