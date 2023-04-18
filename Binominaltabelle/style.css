@@ -3,7 +3,7 @@
 body {
 	font-family: "Roboto";
 	font-style: normal;
-	font-size: 125%;
+	font-size: 100%;
 	background-color: #009FB7;
 	text-align: justify;
 	
@@ -26,7 +26,7 @@ p {
 	box-shadow: 0 0 1em rgba(230, 230, 234, 1);
 	
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 }
 
 footer {
