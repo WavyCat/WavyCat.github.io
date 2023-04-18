@@ -36,8 +36,8 @@ def rechnen():
     try:
         k = js.document.querySelector("#k").checked
 
-        Element("oldstable").write(Element("ergebnis"))
-        Element("oldoldstable").write(Element("oldstable"))
+        Element("oldstable").write(Element("ergebnis").value)
+        Element("oldoldstable").write(Element("oldstable").value)
 
         if k:
             Element("ergebnis").write("(P ≤ " + str(r) + ") = " + str(f(n, p, r) * 100) + "%")
