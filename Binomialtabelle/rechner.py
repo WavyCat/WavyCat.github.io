@@ -36,7 +36,7 @@ def rechnen():
     else:
         k = js.document.querySelector("#k").checked
 
-        if Element("ergebnis").value) != ""
+        if Element("ergebnis").value != ""
             Element("oldstable").write(str(Element("ergebnis").value))
         # Element("oldoldstable").write(str(Element("oldstable").value))
 
