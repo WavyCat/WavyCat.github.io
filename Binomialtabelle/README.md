@@ -4,14 +4,14 @@
 
 $$
 \begin{multline*} 
-{\hspace{1cm}} P(X \leqslant k) = \sum_{i=0}^k \binom{n}{i} p^i (1-p)^{n-i} \\
+{\hspace{1cm}} P(X \leqslant r) = \sum_{i=0}^r \binom{n}{i} p^i (1-p)^{n-i} \\
 Fig.1
 \end{multline*} 
 $$
 
 $$
 \begin{multline*} 
-{\hspace{1cm}} P(X = k) = \binom{n}{k} p^k (1-p)^{n-k} \\
+{\hspace{1cm}} P(X = r) = \binom{n}{k} p^r (1-p)^{n-r} \\
 Fig.2
 \end{multline*} 
 $$
