@@ -30,6 +30,9 @@ def rechnen():
         Element("ergebnis").write("Bitte für r eine natürliche Zahl eingeben.", append=True)
 
     k = js.document.querySelector("#k").checked
+    
+    Element("oldstable").write(Element("ergebnis"))
+    Element("oldoldstable").write(Element("oldstable"))
 
     if k:
         Element("ergebnis").write("(P ≤ "+str(r)+") = "+str(f(n,p,r)*100)+"%")
