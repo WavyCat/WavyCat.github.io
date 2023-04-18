@@ -5,31 +5,40 @@ body {
 	font-style: normal;
 	text-align: center;
 	color: #046865;
-}
-
-@media screen and (max-width: 700px) {
-	.title {
-		display: none;
-	}
+	background: white;
 }
 
 /* Content */
-input [type=text] {
-	border: 3px solid #046865;
+.fuckingfuck {
+	border: 2px solid #046865;
 	border-radius: 4px;
-	width: 100%;
-	padding: 12px 20px;
-	margin: 8px 0;
+	background: whitesmoke;
+	width: 80%;
+	padding: 2px 4px;
+	margin: 4px 0;
 	box-sizing: border-box;
 }
 
-input [type=text]:focus {
+.fuckingfuck:focus {
+	outline: none;
 	border: 3px solid #21A0A0;
+	border-radius: 6px
 }
-	
+
+.button {
+	background-color: #21A0A0;
+	border: 2px solid #046865;
+	border-radius: 4px;
+	width: 82%;
+	color: white;
+	padding: 8px 16px;
+	margin: 4px 2px;
+}
+
 /* Footer */
 footer {
 	position: absolute;
+	font-size: 80%;
 	bottom: 0%;
 	left: 50%;
 	transform: translate(-50%, -50%);
