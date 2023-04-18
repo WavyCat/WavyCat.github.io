@@ -6,4 +6,4 @@ Eine Zusammenstellung verschiedener Projekte von WavyCat:
   
 * Binomialtabelle berechnet kumulierte und unkumulierte Wahrscheinlichkeiten
 
-$$(P(X \leqslant k) = \sum_{i=0}^k \binom{n}{i} p^i (1-p)^{n-i}) {\hspace{20cm}} Fig.1$$
+$$(P(X \leqslant k) = \sum_{i=0}^k \binom{n}{i} p^i (1-p)^{n-i}) {\hspace{10cm}} Fig.1$$
