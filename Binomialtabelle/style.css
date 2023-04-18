@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300&display=swap');
 
 body {
+	margin-top: 5px;
 	font-family: "Martel Sans";
 	font-style: normal;
 	text-align: center;

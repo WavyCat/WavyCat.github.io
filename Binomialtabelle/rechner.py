@@ -22,6 +22,6 @@ def rechnen():
     k = js.document.querySelector("#k").checked
 
     if k:
-        Element("ergebnis").write("(P≤"+str(r)+")= "+str(f(n,p,r)*100)+"%")
+        Element("ergebnis").write("P(X ≤ "+str(r)+") = "+str(f(n,p,r)*100)+"%")
     if not k:
-        Element("ergebnis").write("(P="+str(r)+")= "+str(b(n,p,r)*100)+"%")
+        Element("ergebnis").write("P(X = "+str(r)+") = "+str(b(n,p,r)*100)+"%")
