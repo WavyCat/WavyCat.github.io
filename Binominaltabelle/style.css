@@ -16,7 +16,7 @@ body {
 	align-items: center;
 }
 
-main {
+p {
 	max-width: 1000px;
 	background-color: GhostWhite;
 	
@@ -47,32 +47,6 @@ a:visited {
 
 a {
 	color: #009FB7;
-}
-
-p.more {
-	margin-left: 40px;
-	font-size: 90%;
-	margin-right: 20px;
-}
-
-.example {
-	color: GhostWhite;
-	font-size: 120%;
-	font-style: italic;
-	background-color: #FED766;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-
-.extext {
-	max-width: 600px;
-	margin: 15px;
-	text-align: left;
-
-	-ms-hyphens: none;
-	-webkit-hyphens: none;
-	hyphens: none;
 }
 
 iframe {
