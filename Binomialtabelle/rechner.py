@@ -22,7 +22,8 @@ def rechnen():
     k = js.document.querySelector("#k").checked
 
     if k:
-        print("Kumulierte Wahrscheinlichkeit für n={}, p={} und r={}: ".format(n,p,r))
-        print(str(f(n,p,r)*100) + "%")
-    if not k :
-        print(str(b(n,p,r)*100) +" %")
+        Element("ergebnis").innerHTML = $$\begin{multline*}
+{\hspace{1cm}} P(X \leqslant r) = \sum_{i=0}^r \binom{n}{i} p^i (1-p)^{n-i} \\
+Fig.1
+\end{multline*}
+$$
