@@ -36,11 +36,11 @@ def rechnen():
     else:
         k = js.document.querySelector("#k").checked
 
-        if Element("oldstable").value != "":
-            Element("oldoldstable").write(str(Element("oldstable").value))
+        # if Element("oldstable").value != "":
+        #    Element("oldoldstable").write(str(Element("oldstable").value))
             
-        if Element("ergebnis").value != "":
-            Element("oldstable").write(str(Element("ergebnis").value))
+        # if Element("ergebnis").value != "":
+        #    Element("oldstable").write(str(Element("ergebnis").value))
 
         if k:
             Element("ergebnis").write("(P ≤ " + str(r) + ") = " + str(f(n, p, r) * 100) + "%")
