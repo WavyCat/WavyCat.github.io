@@ -35,6 +35,7 @@ def rechnen():
 
     else:
         k = js.document.querySelector("#k").checked
+        v = js.document.querySelector("#v").checked
 
         if k:
             if v:
