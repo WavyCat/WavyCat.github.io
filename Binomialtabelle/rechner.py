@@ -39,10 +39,11 @@ def rechnen():
     except:
         Element("ergebnis").write("Bitte für r eine natürliche Zahl eingeben.", append=True)
     else:
-        if n>=r:
-            x+=1
-        else:
-            Element("ergebnis").write("Bitte für r eine natürliche Zahl kleiner gleich n eingeben.", append=True)
+        if x==2:
+            if n>=r:
+                x+=1
+            else:
+                Element("ergebnis").write("Bitte für r eine natürliche Zahl kleiner gleich n eingeben.", append=True)
 
     if x == 3:
         k = js.document.querySelector("#k").checked
