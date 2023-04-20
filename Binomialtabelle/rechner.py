@@ -9,7 +9,7 @@ def bin(n, k):
 
 
 def b(n, p, r):
-    return bin(n, r) * pow(p, r) * pow(1 - p, n - r)
+    return bin(n, r) * int(pow(p, r)) * int(pow(1 - p, n - r))
 
 
 def f(n, p, r):
