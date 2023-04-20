@@ -42,4 +42,7 @@ def rechnen():
             else:
                 Element("ergebnis").write("P(X ≤ " + str(r) + ") = " + str(f(n, p, r) * 100) + "%")
         if not k:
-            Element("ergebnis").write("(P = " + str(r) + ") = " + str(b(n, p, r) * 100) + "%")
+            if v:
+                Element("ergebnis").write("1 - P(X = " + str(r) + ") = " + str((1 - b(n, p, r)) * 100) + "%")
+            else:
+                Element("ergebnis").write("P(X = " + str(r) + ") = " + str(b(n, p, r) * 100) + "%")
