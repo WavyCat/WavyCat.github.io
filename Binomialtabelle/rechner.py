@@ -9,7 +9,7 @@ def bin(n, k):
 
 
 def b(n, p, r):
-    return bin(n, r) * int(pow(p, r)) * int(pow(1 - p, n - r))
+    return bin(n, r) * pow(p, r) * pow(1 - p, n - r)
 
 
 def f(n, p, r):
@@ -35,6 +35,7 @@ def rechnen():
 
     else:
         k = js.document.querySelector("#k").checked
+        v = js.document.querySelector("#v").checked
 
         if k:
             if v:
@@ -42,4 +43,7 @@ def rechnen():
             else:
                 Element("ergebnis").write("P(X ≤ " + str(r) + ") = " + str(f(n, p, r) * 100) + "%")
         if not k:
-            Element("ergebnis").write("(P = " + str(r) + ") = " + str(b(n, p, r) * 100) + "%")
+            if v:
+                Element("ergebnis").write("1 - P(X = " + str(r) + ") = " + str((1 - b(n, p, r)) * 100) + "%")
+            else:
+                Element("ergebnis").write("P(X = " + str(r) + ") = " + str(b(n, p, r) * 100) + "%")
