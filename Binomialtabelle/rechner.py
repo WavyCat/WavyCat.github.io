@@ -20,20 +20,31 @@ def f(n, p, r):
 
 
 def rechnen():
+    x=0
+    Element("ergebnis").write("")
     try:
         n = int(Element("n").value)
     except:
         Element("ergebnis").write("Bitte für n eine natürliche Zahl eingeben.")
+    else:
+        x+=1
     try:
         p = float(Element("p").value)
     except:
         Element("ergebnis").write("Bitte für p eine Zahl x eingeben für die gilt 0≤x≤1.", append=True)
+    else:
+        x+=1
     try:
         r = int(Element("r").value)
     except:
         Element("ergebnis").write("Bitte für r eine natürliche Zahl eingeben.", append=True)
-
     else:
+        if n>=r:
+            x+=1
+        else:
+            Element("ergebnis").write("Bitte für r eine natürliche Zahl kleiner gleich n eingeben.", append=True)
+
+    if x == 3:
         k = js.document.querySelector("#k").checked
         v = js.document.querySelector("#v").checked
 
