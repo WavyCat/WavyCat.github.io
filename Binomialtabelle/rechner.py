@@ -29,26 +29,26 @@ def sigmaP(sig,n,p):
 
 def hidclick1():
     if js.document.querySelector("#k").checked:
+        Element("containsr").remove_class("hidden")
         Element("containsr2").add_class("hidden")
-        Element("containsbox2").add_class("hidden")
+        Element("containsbox2").remove_class("hidden")
         Element("containsbox3").add_class("hidden")
         Element("containsbox4").add_class("hidden")
     else:
-
         Element("containsbox2").remove_class("hidden")
         Element("containsbox3").remove_class("hidden")
         Element("containsbox4").remove_class("hidden")
 
-
 def hidclick2():
-    if js.document.querySelector("#v").checked:
-        pass
+    if js.document.querySelector("#kS").checked:
+        Element("containsr").remove_class("hidden")
+        Element("containsr2").remove_class("hidden")
+    else:
+        Element("containsbox1").remove_class("hidden")
+        Element("containsbox2").remove_class("hidden")
+        Element("containsbox4").remove_class("hidden")
 
 def hidclick3():
-    if js.document.querySelector("#kS").checked:
-        pass
-
-def hidclick4():
     if js.document.querySelector("#sigI").checked:
         Element("containsr").add_class("hidden")
         Element("containsr2").add_class("hidden")
