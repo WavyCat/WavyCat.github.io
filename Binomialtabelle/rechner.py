@@ -57,15 +57,16 @@ def rechnen():
         x1+=1
         x2+=1
 
-    if kum:
-        try:
-            r = int(Element("r").value)
-        except:
-            Element("ergebnis").element.innerHTML += "Bitte für r eine natürliche Zahl eingeben.<br />"
+    try:
+        r = int(Element("r").value)
+    except:
+        Element("ergebnis").element.innerHTML += "Bitte für r eine natürliche Zahl eingeben.<br />"
+    else:
         if n>=r:
             x1+=1
         else:
-           Element("ergebnis").element.innerHTML += "Bitte für n eine natürliche Zahl kleiner gleich n eingeben.<br />" 
+            Element("ergebnis").element.innerHTML += "Bitte für n eine natürliche Zahl kleiner gleich n eingeben.<br />" 
+        
     
     if kumS:
         try:
@@ -91,11 +92,18 @@ def rechnen():
         else:
             x2+=1
     
-    if x1 == 3:
+    if (x1 == 3) and (kum):
         if inv:
             Element("ergebnis").element.innerHTML += "1-P("+str(r)+" ≤ X)="+str(1-f(n,p,r))
         else:
             Element("ergebnis").element.innerHTML += "P("+str(r)+" ≤ X)="+str(f(n,p,r))
+    
+    if (x1 == 3) and not (kum):
+        if inv:
+            Element("ergebnis").element.innerHTML += "1-P("+str(r)+" ≤ X)="+str(1-b(n,p,r))
+        else:
+            Element("ergebnis").element.innerHTML += "P("+str(r)+" ≤ X)="+str(b(n,p,r))
+
     if x2 == 6:
         if inv:
             Element("ergebnis").element.innerHTML += "1-P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(1-fdiff(n,p,r1,r2))
