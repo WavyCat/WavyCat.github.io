@@ -33,7 +33,7 @@ def rechnen():
     try:
         n = int(Element("n").value)
     except:
-        Element("ergebnis").write("Bitte für <sub>n</sub> eine natürliche Zahl eingeben.")
+        Element("ergebnis").element.innerHTML= "Bitte für <sub>n</sub> eine natürliche Zahl eingeben."
     else:
         x+=1
     try:
