@@ -28,10 +28,8 @@ def sigmaP(sig,n,p):
     return fdiff(n,p,math.ceil(mu-sig*sigma),math.floor(mu+sig*sigma))
 
 def hidclick1():
-    if js.document.querySelector("#k").checked:
-        Element("containsr").remove_class("hidden")
-        Element("containsr2").add_class("hidden")
-        Element("containsbox2").remove_class("hidden")
+    if js.document.querySelector("#sigI").checked:
+        Element("containsbox2").add_class("hidden")
         Element("containsbox3").add_class("hidden")
         Element("containsbox4").add_class("hidden")
     else:
@@ -40,28 +38,26 @@ def hidclick1():
         Element("containsbox4").remove_class("hidden")
 
 def hidclick2():
-    if js.document.querySelector("#kS").checked:
-        Element("containsr").remove_class("hidden")
-        Element("containsr2").remove_class("hidden")
-        Element("containsbox1").add_class("hidden")
-        Element("containsbox4").add_class("hidden")
-    else:
-        Element("containsbox1").remove_class("hidden")
-        Element("containsbox2").remove_class("hidden")
-        Element("containsbox4").remove_class("hidden")
-
-def hidclick3():
-    if js.document.querySelector("#sigI").checked:
-        Element("containsr").add_class("hidden")
-        Element("containsr2").add_class("hidden")
+    if js.document.querySelector("#k").checked:
         Element("containsbox1").add_class("hidden")
         Element("containsbox2").add_class("hidden")
-        Element("containsbox3").add_class("hidden")
-    else:
         Element("containsr").remove_class("hidden")
+    else:
         Element("containsbox1").remove_class("hidden")
         Element("containsbox2").remove_class("hidden")
+        Element("containsr").add_class("hidden")
+
+def hidclick3():
+    if js.document.querySelector("#kS").checked:
+        Element("containsbox1").add_class("hidden")
+        Element("containsbox3").add_class("hidden")
+        Element("containsr").remove_class("hidden")
+        Element("containsr2").remove_class("hidden")
+    else:
+        Element("containsbox1").remove_class("hidden")
         Element("containsbox3").remove_class("hidden")
+        Element("containsr").add_class("hidden")
+        Element("containsr2").add_class("hidden")
 
     
 
