@@ -32,6 +32,7 @@ def hidclick1():
         Element("containsbox2").add_class("hidden")
         Element("containsbox3").add_class("hidden")
         Element("containsbox4").add_class("hidden")
+        Element("containsr").add_class("hidden")
     else:
         Element("containsbox2").remove_class("hidden")
         Element("containsbox3").remove_class("hidden")
