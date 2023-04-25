@@ -59,12 +59,12 @@ def rechnen():
         x2+=1
 
     try:
-        r = int(Element("r").value)
+        r1 = int(Element("r1").value)
     except:
-        Element("ergebnis").element.innerHTML += "Bitte für r eine natürliche Zahl eingeben.<br />"
+        Element("ergebnis").element.innerHTML += "Bitte für r1 eine natürliche Zahl eingeben.<br />"
     else:
         if x1 == 2:
-            if n>=r:
+            if n>=r1:
                 x1+=1
             else:
                 Element("ergebnis").element.innerHTML += "Bitte für n eine natürliche Zahl kleiner gleich n eingeben.<br />" 
@@ -95,15 +95,15 @@ def rechnen():
     
     if (x1 == 3) and (kum):
         if inv:
-            Element("ergebnis").element.innerHTML += "1-P("+str(r)+" ≤ X)="+str(round((1-f(n,p,r))*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "1-P("+str(r)+" ≤ X)="+str(round((1-f(n,p,r1))*100,4))+"%<br />"
         else:
-            Element("ergebnis").element.innerHTML += "P("+str(r)+" ≤ X)="+str(round(f(n,p,r)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P("+str(r)+" ≤ X)="+str(round(f(n,p,r1)*100,4))+"%<br />"
     
     if (x1 == 3) and not (kum):
         if inv:
-            Element("ergebnis").element.innerHTML += "1-P("+str(r)+" ≤ X)="+str(round((1-b(n,p,r))*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "1-P("+str(r)+" ≤ X)="+str(round((1-b(n,p,r1))*100,4))+"%<br />"
         else:
-            Element("ergebnis").element.innerHTML += "P("+str(r)+" ≤ X)="+str(round(b(n,p,r)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P("+str(r)+" ≤ X)="+str(round(b(n,p,r1)*100,4))+"%<br />"
 
     if x2 == 6:
         if inv:
