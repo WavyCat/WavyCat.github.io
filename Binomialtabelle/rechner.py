@@ -128,13 +128,13 @@ def rechnen():
             else:
                 x2+=1
     
-    if ((x1 == 3) and (kum)) and not (kumS):
+    if ((x1 == 3) and (kum)) and not (kumS or sigI):
         if inv:
             Element("ergebnis").element.innerHTML += "1-P(X ≤ "+str(r1)+")="+str(round((1-f(n,p,r1))*100,4))+"%<br />"
         else:
             Element("ergebnis").element.innerHTML += "P(X ≤ "+str(r1)+")="+str(round(f(n,p,r1)*100,4))+"%<br />"
     
-    if ((x1 == 3) and not (kum)) and not (kumS):
+    if ((x1 == 3) and not (kum)) and not (kumS or sigI):
         if inv:
             Element("ergebnis").element.innerHTML += "1-P(X = "+str(r1)+")="+str(round((1-b(n,p,r1))*100,4))+"%<br />"
         else:
