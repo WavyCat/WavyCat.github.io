@@ -30,18 +30,21 @@ def sigmaP(sig,n,p):
 def rechnen():
     x=0
     Element("ergebnis").element.innerHTML = ""
+
     try:
         n = int(Element("n").value)
     except:
-        Element("ergebnis").element.innerHTML = "Bitte für <sub>n</sub> eine natürliche Zahl eingeben.<br />"
+        Element("ergebnis").element.innerHTML = "Bitte für n eine natürliche Zahl eingeben.<br />"
     else:
         x+=1
+
     try:
         p = float(Element("p").value)
     except:
         Element("ergebnis").element.innerHTML += "Bitte für p eine Zahl x eingeben für die gilt 0≤x≤1.<br />"
     else:
         x+=1
+
     try:
         r = int(Element("r").value)
     except:
@@ -52,6 +55,11 @@ def rechnen():
                 x+=1
             else:
                 Element("ergebnis").element.innerHTML += "Bitte für r eine natürliche Zahl kleiner gleich n eingeben.<br />"
+
+    try:
+        r1 = int(Element("r1").value)
+    except:
+        Element("ergebnis").element.innerHTML += "Bitte für r1 eine natürliche Zahl eingeben.<br />"
 
     if x == 3:
         k = js.document.querySelector("#k").checked
