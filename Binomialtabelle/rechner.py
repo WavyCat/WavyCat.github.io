@@ -1,22 +1,33 @@
 import math
 
-
-def bin(n, k):
+def bin(n,k):
     nf = math.factorial(n)
     kf = math.factorial(k)
-    nkf = math.factorial((n - k))
-    return nf // (kf * nkf)
+    nkf = math.factorial((n-k))
+    return nf//(kf*nkf)
 
+def musig(n,p):
+    mu=n*p
+    sig=math.sqrt(mu*(1-p))
+    return mu, sig
 
-def b(n, p, r):
-    return bin(n, r) * pow(p, r) * pow(1 - p, n - r)
+def b(n,p,r):
+    return bin(n,r)*pow(p,r)*pow(1-p,n-r)
 
-
-def f(n, p, r):
+def f(n,p,r):
     ftotal = 0
-    for i in range(r + 1):
-        ftotal += b(n, p, i)
+    for i in range(r+1):
+        ftotal += b(n,p,i)
     return ftotal
+
+def fdiff(n,p,r1,r2):
+    return f(n,p,r2)-f(n,p,r1-1)
+
+def sigmaP(sig,n,p):
+    mu, sigma = musig(n,p)
+    return fdiff(n,p,math.ceil(mu-sig*sigma),math.floor(mu+sig*sigma))
+
+print(sigmaP(1,80,0.1))
 
 
 def rechnen():
