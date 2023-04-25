@@ -59,12 +59,6 @@ def hidclick3():
         Element("containsr").add_class("hidden")
         Element("containsr2").add_class("hidden")
 
-    
-
-
-def hidclick2():
-    Element("containsr2").remove_class("hidden")
-
 def rechnen():
     #Alle drei Checkboxen(kumuliert, invertiert, und kumuliert Differenz, SigmaInterval) werden in Variablen gespeichert
     inv = js.document.querySelector("#v").checked
