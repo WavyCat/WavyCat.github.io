@@ -86,7 +86,7 @@ def rechnen():
                 Element("ergebnis").element.innerHTML += "Bitte für r2 eine natürliche Zahl größer r1 eingeben.<br />"
             else:
                 x2+=1
-            if (r1>n) or (r2>n):
+            if (x1!=0) and ((r1>n) or (r2>n)):
                 Element("ergebnis").element.innerHTML += "Bitte für r2 und r1 eine natürliche Zahl kleiner n eingeben.<br />"
             else:
                 x2+=1
