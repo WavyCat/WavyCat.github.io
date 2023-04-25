@@ -40,22 +40,22 @@ def hidclick1():
 def hidclick2():
     if js.document.querySelector("#k").checked:
         Element("containsbox1").add_class("hidden")
-        Element("containsbox2").add_class("hidden")
+        Element("containsbox3").add_class("hidden")
         Element("containsr").remove_class("hidden")
     else:
         Element("containsbox1").remove_class("hidden")
-        Element("containsbox2").remove_class("hidden")
+        Element("containsbox3").remove_class("hidden")
         Element("containsr").add_class("hidden")
 
 def hidclick3():
     if js.document.querySelector("#kS").checked:
         Element("containsbox1").add_class("hidden")
-        Element("containsbox3").add_class("hidden")
+        Element("containsbox2").add_class("hidden")
         Element("containsr").remove_class("hidden")
         Element("containsr2").remove_class("hidden")
     else:
         Element("containsbox1").remove_class("hidden")
-        Element("containsbox3").remove_class("hidden")
+        Element("containsbox2").remove_class("hidden")
         Element("containsr").add_class("hidden")
         Element("containsr2").add_class("hidden")
 
