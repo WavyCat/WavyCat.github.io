@@ -105,7 +105,6 @@ def rechnen():
             else:
                 Element("ergebnis").element.innerHTML += "Bitte für n eine natürliche Zahl kleiner gleich n eingeben.<br />" 
         
-    
     if kumS:
         try:
             r1 = int(Element("r1").value)
