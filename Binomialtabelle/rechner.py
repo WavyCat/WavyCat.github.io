@@ -130,25 +130,25 @@ def rechnen():
     
     if (x1 == 3) and (kum):
         if inv:
-            Element("ergebnis").element.innerHTML = "1-P("+str(r1)+" ≤ X)="+str(round((1-f(n,p,r1))*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "1-P("+str(r1)+" ≤ X)="+str(round((1-f(n,p,r1))*100,4))+"%<br />"
         else:
-            Element("ergebnis").element.innerHTML = "P("+str(r1)+" ≤ X)="+str(round(f(n,p,r1)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P("+str(r1)+" ≤ X)="+str(round(f(n,p,r1)*100,4))+"%<br />"
     
     if (x1 == 3) and not (kum):
         if inv:
-            Element("ergebnis").element.innerHTML = "1-P("+str(r1)+" ≤ X)="+str(round((1-b(n,p,r1))*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "1-P("+str(r1)+" ≤ X)="+str(round((1-b(n,p,r1))*100,4))+"%<br />"
         else:
-            Element("ergebnis").element.innerHTML = "P("+str(r1)+" ≤ X)="+str(round(b(n,p,r1)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P("+str(r1)+" ≤ X)="+str(round(b(n,p,r1)*100,4))+"%<br />"
 
     if x2 == 6:
         if inv:
-            Element("ergebnis").element.innerHTML = "1-P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(round((1-fdiff(n,p,r1,r2))*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "1-P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(round((1-fdiff(n,p,r1,r2))*100,4))+"%<br />"
         else:
-            Element("ergebnis").element.innerHTML = "P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(round(fdiff(n,p,r1,r2)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(round(fdiff(n,p,r1,r2)*100,4))+"%<br />"
 
     if x1 >= 2:
         if sigI:
-            Element("ergebnis").element.innerHTML = "P<sub>σ</sub>="+str(round(sigmaP(1,n,p)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P<sub>σ</sub>="+str(round(sigmaP(1,n,p)*100,4))+"%<br />"
             Element("ergebnis").element.innerHTML += "P<sub>2σ</sub>="+str(round(sigmaP(2,n,p)*100,4))+"%<br />"
             Element("ergebnis").element.innerHTML += "P<sub>3σ</sub>="+str(round(sigmaP(3,n,p)*100,4))+"%<br />"
             Element("ergebnis").element.innerHTML += "P<sub>1.64σ</sub>="+str(round(sigmaP(1.64,n,p)*100,4))+"%<br />"
