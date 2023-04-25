@@ -95,15 +95,15 @@ def rechnen():
     
     if (x1 == 3) and (kum):
         if inv:
-            Element("ergebnis").element.innerHTML += "1-P("+str(r)+" ≤ X)="+str(round((1-f(n,p,r1))*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "1-P("+str(r1)+" ≤ X)="+str(round((1-f(n,p,r1))*100,4))+"%<br />"
         else:
-            Element("ergebnis").element.innerHTML += "P("+str(r)+" ≤ X)="+str(round(f(n,p,r1)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P("+str(r1)+" ≤ X)="+str(round(f(n,p,r1)*100,4))+"%<br />"
     
     if (x1 == 3) and not (kum):
         if inv:
-            Element("ergebnis").element.innerHTML += "1-P("+str(r)+" ≤ X)="+str(round((1-b(n,p,r1))*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "1-P("+str(r1)+" ≤ X)="+str(round((1-b(n,p,r1))*100,4))+"%<br />"
         else:
-            Element("ergebnis").element.innerHTML += "P("+str(r)+" ≤ X)="+str(round(b(n,p,r1)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P("+str(r1)+" ≤ X)="+str(round(b(n,p,r1)*100,4))+"%<br />"
 
     if x2 == 6:
         if inv:
