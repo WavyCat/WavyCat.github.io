@@ -43,6 +43,8 @@ def hidclick2():
     if js.document.querySelector("#kS").checked:
         Element("containsr").remove_class("hidden")
         Element("containsr2").remove_class("hidden")
+        Element("containsbox1").add_class("hidden")
+        Element("containsbox4").add_class("hidden")
     else:
         Element("containsbox1").remove_class("hidden")
         Element("containsbox2").remove_class("hidden")
