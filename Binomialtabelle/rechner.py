@@ -29,17 +29,17 @@ def sigmaP(sig,n,p):
 
 def rechnen():
     x=0
-    Element("ergebnis").write("")
+    Element("ergebnis").element.innerHTML = ""
     try:
         n = int(Element("n").value)
     except:
-        Element("ergebnis").element.innerHTML= "Bitte für <sub>n</sub> eine natürliche Zahl eingeben."
+        Element("ergebnis").element.innerHTML = "Bitte für <sub>n</sub> eine natürliche Zahl eingeben.\n"
     else:
         x+=1
     try:
         p = float(Element("p").value)
     except:
-        Element("ergebnis").write("Bitte für p eine Zahl x eingeben für die gilt 0≤x≤1.", append=True)
+        Element("ergebnis").element.innerHTML += "Bitte für p eine Zahl x eingeben für die gilt 0≤x≤1.\n"
     else:
         x+=1
     try:
