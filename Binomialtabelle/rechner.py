@@ -93,18 +93,18 @@ def rechnen():
     
     if (x1 == 3) and (kum):
         if inv:
-            Element("ergebnis").element.innerHTML += "1-P("+str(r)+" ≤ X)="+str(1-f(n,p,r))
+            Element("ergebnis").element.innerHTML += "1-P("+str(r)+" ≤ X)="+str((1-f(n,p,r))*100)+"%<br />"
         else:
-            Element("ergebnis").element.innerHTML += "P("+str(r)+" ≤ X)="+str(f(n,p,r))
+            Element("ergebnis").element.innerHTML += "P("+str(r)+" ≤ X)="+str(f(n,p,r)*100)+"%<br />"
     
     if (x1 == 3) and not (kum):
         if inv:
-            Element("ergebnis").element.innerHTML += "1-P("+str(r)+" ≤ X)="+str(1-b(n,p,r))
+            Element("ergebnis").element.innerHTML += "1-P("+str(r)+" ≤ X)="+str((1-b(n,p,r))*100)+"%<br />"
         else:
-            Element("ergebnis").element.innerHTML += "P("+str(r)+" ≤ X)="+str(b(n,p,r))
+            Element("ergebnis").element.innerHTML += "P("+str(r)+" ≤ X)="+str(b(n,p,r)*100)+"%<br />"
 
     if x2 == 6:
         if inv:
-            Element("ergebnis").element.innerHTML += "1-P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(1-fdiff(n,p,r1,r2))
+            Element("ergebnis").element.innerHTML += "1-P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str((1-fdiff(n,p,r1,r2))*100)+"%<br />"
         else:
-            Element("ergebnis").element.innerHTML += "P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(fdiff(n,p,r1,r2))
+            Element("ergebnis").element.innerHTML += "P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(fdiff(n,p,r1,r2)*100)+"%<br />"
