@@ -68,10 +68,6 @@ body {
 	border-color: #d7620f;
 }
 
-.container input:checked ~ .checkmark + #r2 {
-	display: none;
-}
-
 .checkmark:after {
 	position: relative;
 	content: "";
