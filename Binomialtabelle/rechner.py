@@ -28,10 +28,11 @@ def sigmaP(sig,n,p):
     return fdiff(n,p,math.ceil(mu-sig*sigma),math.floor(mu+sig*sigma))
 
 def rechnen():
-    #Alle drei Checkboxen(kumuliert, invertiert, und kumuliert Differenz) werden in Variablen gespeichert
+    #Alle drei Checkboxen(kumuliert, invertiert, und kumuliert Differenz, SigmaInterval) werden in Variablen gespeichert
     inv = js.document.querySelector("#v").checked
     kum = js.document.querySelector("#k").checked
     kumS = js.document.querySelector("#kS").checked 
+    sigI = js.document.querySelector("#sigI").checked
     
     #Checksummen für kum und kumS
     x1=0
@@ -62,10 +63,11 @@ def rechnen():
     except:
         Element("ergebnis").element.innerHTML += "Bitte für r eine natürliche Zahl eingeben.<br />"
     else:
-        if n>=r:
-            x1+=1
-        else:
-            Element("ergebnis").element.innerHTML += "Bitte für n eine natürliche Zahl kleiner gleich n eingeben.<br />" 
+        if x1 == 2:
+            if n>=r:
+                x1+=1
+            else:
+                Element("ergebnis").element.innerHTML += "Bitte für n eine natürliche Zahl kleiner gleich n eingeben.<br />" 
         
     
     if kumS:
@@ -108,3 +110,12 @@ def rechnen():
             Element("ergebnis").element.innerHTML += "1-P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(round((1-fdiff(n,p,r1,r2))*100,4))+"%<br />"
         else:
             Element("ergebnis").element.innerHTML += "P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(round(fdiff(n,p,r1,r2)*100,4))+"%<br />"
+
+    if x1 >= 2:
+        if sigI:
+            Element("ergebnis").element.innerHTML += "P<sub>σ</sub>="+str(round(sigmaP(1,n,p)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P<sub>2σ</sub>="+str(round(sigmaP(2,n,p)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P<sub>3σ</sub>="+str(round(sigmaP(3,n,p)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P<sub>1.64σ</sub>="+str(round(sigmaP(1.64,n,p)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P<sub>1.96σ</sub>="+str(round(sigmaP(1.96,n,p)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P<sub>2.58σ</sub>="+str(round(sigmaP(2.58,n,p)*100,4))+"%<br />"
