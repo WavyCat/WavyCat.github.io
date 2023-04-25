@@ -27,9 +27,6 @@ def sigmaP(sig,n,p):
     mu, sigma = musig(n,p)
     return fdiff(n,p,math.ceil(mu-sig*sigma),math.floor(mu+sig*sigma))
 
-print(sigmaP(1,80,0.1))
-
-
 def rechnen():
     x=0
     Element("ergebnis").write("")
