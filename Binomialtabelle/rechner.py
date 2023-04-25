@@ -27,6 +27,9 @@ def sigmaP(sig,n,p):
     mu, sigma = musig(n,p)
     return fdiff(n,p,math.ceil(mu-sig*sigma),math.floor(mu+sig*sigma))
 
+def hidclick():
+    print("Hello")
+
 def rechnen():
     #Alle drei Checkboxen(kumuliert, invertiert, und kumuliert Differenz, SigmaInterval) werden in Variablen gespeichert
     inv = js.document.querySelector("#v").checked

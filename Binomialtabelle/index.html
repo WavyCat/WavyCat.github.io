@@ -14,22 +14,22 @@
 			<p id="containsr2" class="hidden">r<sub>2</sub> = <input class="fuckingfuck" type="text" name="userr2" id="r2" size="6"></p>
 			<p id="containsbox1">	
 				<label class="container"> kumuliert? 
-				<input type="checkbox" name="userk" id="k">
+				<input type="checkbox" name="userk" id="k" py-click="hidclick()">
 				<span class="checkmark"></span>
 			</p>
 			<p id="containsbox2">	
 				<label class="container"> invertiert? 
-				<input type="checkbox" name="userv" id="v">
+				<input type="checkbox" name="userv" id="v" py-click="hidclick()">
 				<span class="checkmark"></span>
 			</p> 
 			<p>	
 				<label class="container"> kumuliert im Bereich von P(r ≤ X ≤ r<sub>2</sub>)? 
-				<input type="checkbox" name="userkS" id="kS">
+				<input type="checkbox" name="userkS" id="kS" py-click="hidclick()">
 				<span class="checkmark"></span>
 			</p> 
 			<p>	
 				<label class="container"> Sigma-Intervalle? 
-				<input type="checkbox" name="userSigI" id="sigI">
+				<input type="checkbox" name="userSigI" id="sigI" py-click="hidclick()">
 				<span class="checkmark"></span>
 			</p> 
 			<p><input class="button" type="button"  value="Berechnen" py-click="rechnen()"></p>
