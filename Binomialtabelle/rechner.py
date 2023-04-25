@@ -43,6 +43,5 @@ def rechnen():
     Element("ergebnis").element.innerHTML = ""
 
     #Eingabe Überprüfung
-    if kum:
-
+    
 
