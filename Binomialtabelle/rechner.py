@@ -126,7 +126,7 @@ def rechnenNeu():
     kumS = js.document.querySelector("#kS").checked 
     sigI = js.document.querySelector("#sigI").checked 
 
-    if not (kum and kumS and sigI):
+    if not (kum or kumS or sigI):
         n = test("n")
         p = test("p")
         r = test("r")
