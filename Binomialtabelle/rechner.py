@@ -181,11 +181,6 @@ def rechnenNeu():
             Element("ergebnis").element.innerHTML += "P<sub>1.96σ</sub>("+str(math.ceil(mu-sig*1.96))+" ≤ X ≤ "+str(math.floor(mu+sig*1.96))+")="+str(round(sigmaP(1.96,n,p)*100,4))+"%<br />"
             Element("ergebnis").element.innerHTML += "P<sub>2.58σ</sub>("+str(math.ceil(mu-sig*2.58))+" ≤ X ≤ "+str(math.floor(mu+sig*2.58))+")="+str(round(sigmaP(2.58,n,p)*100,4))+"%<br />"
         
-
-
-
-
-
 def rechnen():
     #Alle drei Checkboxen(kumuliert, invertiert, und kumuliert Differenz, SigmaInterval) werden in Variablen gespeichert
     inv = js.document.querySelector("#v").checked
