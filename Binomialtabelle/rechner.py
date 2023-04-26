@@ -111,23 +111,32 @@ def test(feld,x="None",y="None"):
                 Element("ergebnis").element.innerHTML += "Bitte für r2 eine Zahl größer 0 eingeben.<br />"
 
     if feld == "r<=r2":
-        if x<=y:
-            return True
-        else:
-            Element("ergebnis").element.innerHTML += "Bitte für r2 (r) eine natürliche Zahl größer (kleiner) gleich r (r2) eingeben.<br />" 
-    
-    if feld == "r<=n":
-        if (x<=y):
-            return True
-        else:
-            Element("ergebnis").element.innerHTML += "Bitte für r eine natürliche Zahl kleiner gleich n eingeben.<br />"
-    
-    if feld == "r2<=n":
-        if (x<=y):
-            return True
-        else:
-            Element("ergebnis").element.innerHTML += "Bitte für r2 eine natürliche Zahl kleiner gleich n eingeben.<br />"  
+        try:
+            if x<=y:
+                return True
+            else:
+                Element("ergebnis").element.innerHTML += "Bitte für r2 (r) eine natürliche Zahl größer (kleiner) gleich r (r2) eingeben.<br />" 
+        except:
+            pass
 
+    if feld == "r<=n":
+        try:
+            if (x<=y):
+                return True
+            else:
+                Element("ergebnis").element.innerHTML += "Bitte für r eine natürliche Zahl kleiner gleich n eingeben.<br />"
+        except:
+            pass
+
+    if feld == "r2<=n":
+        try:
+            if (x<=y):
+                return True
+            else:
+                Element("ergebnis").element.innerHTML += "Bitte für r2 eine natürliche Zahl kleiner gleich n eingeben.<br />"  
+        except:
+            pass
+        
 def rechnenNeu():
     #Alle drei Checkboxen(kumuliert, invertiert, und kumuliert Differenz, SigmaInterval) werden in Variablen gespeichert
     inv = js.document.querySelector("#v").checked
