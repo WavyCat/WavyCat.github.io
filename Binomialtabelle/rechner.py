@@ -64,7 +64,7 @@ def hidclick3():
         Element("containsr").remove_class("hidden")
 
 def test(feld):
-    n,p,r,r2 = None
+    n,p,r,r2 = None,None,None,None
 
     if feld == "n":
         try:
