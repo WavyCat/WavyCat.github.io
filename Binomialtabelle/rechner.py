@@ -160,9 +160,9 @@ def rechnenNeu():
         r = test("r")
         if test("r<=n",r,n):
             if inv:
-                Element("ergebnis").element.innerHTML += "1-P(X = "+str(r)+")="+str(round((1-f(n,p,r))*100,4))+"%<br />"
+                Element("ergebnis").element.innerHTML += "1-P(X ≤ "+str(r)+")="+str(round((1-f(n,p,r))*100,4))+"%<br />"
             else:
-                Element("ergebnis").element.innerHTML += "P(X = "+str(r)+")="+str(round(f(n,p,r)*100,4))+"%<br />"
+                Element("ergebnis").element.innerHTML += "P(X ≤ "+str(r)+")="+str(round(f(n,p,r)*100,4))+"%<br />"
 
     if kumS:
         n = test("n")
