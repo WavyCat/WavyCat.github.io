@@ -63,6 +63,117 @@ def hidclick3():
         Element("containsr2").add_class("hidden")
         Element("containsr").remove_class("hidden")
 
+def test(feld):
+    n,p,r,r2 = None
+
+    if feld == "n":
+        try:
+            n = int(Element("n").value)
+        except:
+            Element("ergebnis").element.innerHTML += "Bitte für n eine natürliche Zahl eingeben.<br />"
+        else:
+            return n
+        
+    if feld == "p":
+        try:
+            p = float(Element("p").value)
+        except:
+            Element("ergebnis").element.innerHTML += "Bitte für p eine reele Zahl zwischen 0 und 1 eingeben.<br />"
+        else:
+            return p
+        
+    if feld == "r":
+        try:
+            r = int(Element("r").value)
+        except:
+            Element("ergebnis").element.innerHTML += "Bitte für r eine natürliche Zahl eingeben.<br />"
+        else:
+            return r
+        
+    if feld == "r2":
+        try:
+            r2 = int(Element("r2").value)
+        except:
+            Element("ergebnis").element.innerHTML += "Bitte für r2 eine natürliche Zahl eingeben.<br />"
+        else:
+            return r2
+    
+    if feld == "r<=r2":
+        if (r != None) and (r2 != None):
+            if r<=r2:
+                return True
+            else:
+               Element("ergebnis").element.innerHTML += "Bitte für r2 (r) eine natürliche Zahl größer (kleiner) gleich r (r2) eingeben.<br />" 
+    
+    if feld == "r<=n":
+        if (r != None) and (n != None):
+            if (r<=n):
+                return True
+            else:
+               Element("ergebnis").element.innerHTML += "Bitte für r eine natürliche Zahl kleiner gleich n eingeben.<br />"
+    
+    if feld == "r2<=n":
+        if (r2 != None) and (n != None):
+            if (r2<=n):
+                return True
+            else:
+               Element("ergebnis").element.innerHTML += "Bitte für r2 eine natürliche Zahl kleiner gleich n eingeben.<br />"  
+
+def rechnenNeu():
+    #Alle drei Checkboxen(kumuliert, invertiert, und kumuliert Differenz, SigmaInterval) werden in Variablen gespeichert
+    inv = js.document.querySelector("#v").checked
+    kum = js.document.querySelector("#k").checked
+    kumS = js.document.querySelector("#kS").checked 
+    sigI = js.document.querySelector("#sigI").checked 
+
+    if not (kum and kumS and sigI):
+        n = test("n")
+        p = test("p")
+        r = test("r")
+        if test("r<=n"):
+            if inv:
+                Element("ergebnis").element.innerHTML += "1-P(X = "+str(r1)+")="+str(round((1-b(n,p,r))*100,4))+"%<br />"
+            else:
+                Element("ergebnis").element.innerHTML += "P(X = "+str(r1)+")="+str(round(b(n,p,r)*100,4))+"%<br />"
+
+    if kum:
+        n = test("n")
+        p = test("p")
+        r = test("r")
+        if test("r<=n"):
+            if inv:
+                Element("ergebnis").element.innerHTML += "1-P(X = "+str(r1)+")="+str(round((1-f(n,p,r))*100,4))+"%<br />"
+            else:
+                Element("ergebnis").element.innerHTML += "P(X = "+str(r1)+")="+str(round(f(n,p,r)*100,4))+"%<br />"
+
+    if kumS:
+        n = test("n")
+        p = test("p")
+        r = test("r")
+        r2 = test("r2")
+        if test("r<=n") and test("r2<=n") and test("r<=r2"):
+            if inv:
+                Element("ergebnis").element.innerHTML += "1-P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(round((1-fdiff(n,p,r,r2))*100,4))+"%<br />"
+            else:
+                Element("ergebnis").element.innerHTML += "P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(round(fdiff(n,p,r,r2)*100,4))+"%<br />"
+    
+    if sigI:
+        n = test("n")
+        p = test("p")
+        if (n != None) and (p != None):
+            mu, sig = musig(n,p)
+            Element("ergebnis").element.innerHTML += "P<sub>σ</sub>("+str(math.ceil(mu-sig))+" ≤ X ≤ "+str(math.floor(mu+sig))+")="+str(round(sigmaP(1,n,p)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P<sub>2σ</sub>("+str(math.ceil(mu-sig*2))+" ≤ X ≤ "+str(math.floor(mu+sig*2))+")="+str(round(sigmaP(2,n,p)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P<sub>3σ</sub>("+str(math.ceil(mu-sig*3))+" ≤ X ≤ "+str(math.floor(mu+sig*3))+")="+str(round(sigmaP(3,n,p)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P<sub>1.64σ</sub>("+str(math.ceil(mu-sig*1.64))+" ≤ X ≤ "+str(math.floor(mu+sig*1.64))+")="+str(round(sigmaP(1.64,n,p)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P<sub>1.96σ</sub>("+str(math.ceil(mu-sig*1.96))+" ≤ X ≤ "+str(math.floor(mu+sig*1.96))+")="+str(round(sigmaP(1.96,n,p)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML += "P<sub>2.58σ</sub>("+str(math.ceil(mu-sig*2.58))+" ≤ X ≤ "+str(math.floor(mu+sig*2.58))+")="+str(round(sigmaP(2.58,n,p)*100,4))+"%<br />"
+        
+
+
+
+
+
 def rechnen():
     #Alle drei Checkboxen(kumuliert, invertiert, und kumuliert Differenz, SigmaInterval) werden in Variablen gespeichert
     inv = js.document.querySelector("#v").checked
