@@ -72,7 +72,8 @@ def test(feld):
         except:
             Element("ergebnis").element.innerHTML += "Bitte für n eine natürliche Zahl eingeben.<br />"
         else:
-            return n
+            if n>=0:
+                return n
         
     if feld == "p":
         try:
@@ -80,7 +81,8 @@ def test(feld):
         except:
             Element("ergebnis").element.innerHTML += "Bitte für p eine reele Zahl zwischen 0 und 1 eingeben.<br />"
         else:
-            return p
+            if 0<=p<=1:
+                return p
         
     if feld == "r":
         try:
