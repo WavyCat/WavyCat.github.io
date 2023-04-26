@@ -136,7 +136,7 @@ def test(feld,x="None",y="None"):
                 Element("ergebnis").element.innerHTML += "Bitte für r2 eine natürliche Zahl kleiner gleich n eingeben.<br />"  
         except:
             pass
-        
+
 def rechnenNeu():
     #Alle drei Checkboxen(kumuliert, invertiert, und kumuliert Differenz, SigmaInterval) werden in Variablen gespeichert
     inv = js.document.querySelector("#v").checked
@@ -151,18 +151,18 @@ def rechnenNeu():
         r = test("r")
         if test("r<=n",r,n):
             if inv:
-                Element("ergebnis").element.innerHTML += "1-P(X = "+str(r1)+")="+str(round((1-b(n,p,r))*100,4))+"%<br />"
+                Element("ergebnis").element.innerHTML += "1-P(X = "+str(r)+")="+str(round((1-b(n,p,r))*100,4))+"%<br />"
             else:
-                Element("ergebnis").element.innerHTML += "P(X = "+str(r1)+")="+str(round(b(n,p,r)*100,4))+"%<br />"
+                Element("ergebnis").element.innerHTML += "P(X = "+str(r)+")="+str(round(b(n,p,r)*100,4))+"%<br />"
     if kum:
         n = test("n")
         p = test("p")
         r = test("r")
         if test("r<=n",r,n):
             if inv:
-                Element("ergebnis").element.innerHTML += "1-P(X = "+str(r1)+")="+str(round((1-f(n,p,r))*100,4))+"%<br />"
+                Element("ergebnis").element.innerHTML += "1-P(X = "+str(r)+")="+str(round((1-f(n,p,r))*100,4))+"%<br />"
             else:
-                Element("ergebnis").element.innerHTML += "P(X = "+str(r1)+")="+str(round(f(n,p,r)*100,4))+"%<br />"
+                Element("ergebnis").element.innerHTML += "P(X = "+str(r)+")="+str(round(f(n,p,r)*100,4))+"%<br />"
 
     if kumS:
         n = test("n")
@@ -171,9 +171,9 @@ def rechnenNeu():
         r2 = test("r2")
         if test("r<=n",r,n) and test("r2<=n",r2,n) and test("r<=r2",r,r2):
             if inv:
-                Element("ergebnis").element.innerHTML += "1-P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(round((1-fdiff(n,p,r,r2))*100,4))+"%<br />"
+                Element("ergebnis").element.innerHTML += "1-P("+str(r)+" ≤ X ≤ "+str(r2)+")="+str(round((1-fdiff(n,p,r,r2))*100,4))+"%<br />"
             else:
-                Element("ergebnis").element.innerHTML += "P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(round(fdiff(n,p,r,r2)*100,4))+"%<br />"
+                Element("ergebnis").element.innerHTML += "P("+str(r)+" ≤ X ≤ "+str(r2)+")="+str(round(fdiff(n,p,r,r2)*100,4))+"%<br />"
     
     if sigI:
         n = test("n")
