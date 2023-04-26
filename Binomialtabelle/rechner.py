@@ -63,7 +63,7 @@ def hidclick3():
         Element("containsr2").add_class("hidden")
         Element("containsr").remove_class("hidden")
 
-def test(feld):
+def test(feld,x="None",y="None"):
     n,p,r,r2 = None,None,None,None
 
     if feld == "n":
@@ -111,25 +111,22 @@ def test(feld):
                 Element("ergebnis").element.innerHTML += "Bitte für r2 eine Zahl größer 0 eingeben.<br />"
 
     if feld == "r<=r2":
-        if (r != None) and (r2 != None):
-            if r<=r2:
-                return True
-            else:
-               Element("ergebnis").element.innerHTML += "Bitte für r2 (r) eine natürliche Zahl größer (kleiner) gleich r (r2) eingeben.<br />" 
+        if x<=y:
+            return True
+        else:
+            Element("ergebnis").element.innerHTML += "Bitte für r2 (r) eine natürliche Zahl größer (kleiner) gleich r (r2) eingeben.<br />" 
     
     if feld == "r<=n":
-        if (r != None) and (n != None):
-            if (r<=n):
-                return True
-            else:
-               Element("ergebnis").element.innerHTML += "Bitte für r eine natürliche Zahl kleiner gleich n eingeben.<br />"
+        if (x<=y):
+            return True
+        else:
+            Element("ergebnis").element.innerHTML += "Bitte für r eine natürliche Zahl kleiner gleich n eingeben.<br />"
     
     if feld == "r2<=n":
-        if (r2 != None) and (n != None):
-            if (r2<=n):
-                return True
-            else:
-               Element("ergebnis").element.innerHTML += "Bitte für r2 eine natürliche Zahl kleiner gleich n eingeben.<br />"  
+        if (x<=y):
+            return True
+        else:
+            Element("ergebnis").element.innerHTML += "Bitte für r2 eine natürliche Zahl kleiner gleich n eingeben.<br />"  
 
 def rechnenNeu():
     #Alle drei Checkboxen(kumuliert, invertiert, und kumuliert Differenz, SigmaInterval) werden in Variablen gespeichert
@@ -143,7 +140,7 @@ def rechnenNeu():
         n = test("n")
         p = test("p")
         r = test("r")
-        if test("r<=n"):
+        if test("r<=n",r,n):
             if inv:
                 Element("ergebnis").element.innerHTML += "1-P(X = "+str(r1)+")="+str(round((1-b(n,p,r))*100,4))+"%<br />"
             else:
@@ -152,7 +149,7 @@ def rechnenNeu():
         n = test("n")
         p = test("p")
         r = test("r")
-        if test("r<=n"):
+        if test("r<=n",r,n):
             if inv:
                 Element("ergebnis").element.innerHTML += "1-P(X = "+str(r1)+")="+str(round((1-f(n,p,r))*100,4))+"%<br />"
             else:
@@ -163,7 +160,7 @@ def rechnenNeu():
         p = test("p")
         r = test("r")
         r2 = test("r2")
-        if test("r<=n") and test("r2<=n") and test("r<=r2"):
+        if test("r<=n",r,n) and test("r2<=n",r2,n) and test("r<=r2",r,r2):
             if inv:
                 Element("ergebnis").element.innerHTML += "1-P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(round((1-fdiff(n,p,r,r2))*100,4))+"%<br />"
             else:
