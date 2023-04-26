@@ -132,9 +132,9 @@ def rechnenNeu():
         r = test("r")
         if test("r<=n"):
             if inv:
-                Element("ergebnis").element.innerHTML += "1-P(X = "+str(r1)+")="+str(round((1-b(n,p,r))*100,4))+"%<br />"
+                Element("ergebnis").element.innerHTML = "1-P(X = "+str(r1)+")="+str(round((1-b(n,p,r))*100,4))+"%<br />"
             else:
-                Element("ergebnis").element.innerHTML += "P(X = "+str(r1)+")="+str(round(b(n,p,r)*100,4))+"%<br />"
+                Element("ergebnis").element.innerHTML = "P(X = "+str(r1)+")="+str(round(b(n,p,r)*100,4))+"%<br />"
 
     if kum:
         n = test("n")
@@ -142,9 +142,9 @@ def rechnenNeu():
         r = test("r")
         if test("r<=n"):
             if inv:
-                Element("ergebnis").element.innerHTML += "1-P(X = "+str(r1)+")="+str(round((1-f(n,p,r))*100,4))+"%<br />"
+                Element("ergebnis").element.innerHTML = "1-P(X = "+str(r1)+")="+str(round((1-f(n,p,r))*100,4))+"%<br />"
             else:
-                Element("ergebnis").element.innerHTML += "P(X = "+str(r1)+")="+str(round(f(n,p,r)*100,4))+"%<br />"
+                Element("ergebnis").element.innerHTML = "P(X = "+str(r1)+")="+str(round(f(n,p,r)*100,4))+"%<br />"
 
     if kumS:
         n = test("n")
@@ -153,16 +153,16 @@ def rechnenNeu():
         r2 = test("r2")
         if test("r<=n") and test("r2<=n") and test("r<=r2"):
             if inv:
-                Element("ergebnis").element.innerHTML += "1-P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(round((1-fdiff(n,p,r,r2))*100,4))+"%<br />"
+                Element("ergebnis").element.innerHTML = "1-P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(round((1-fdiff(n,p,r,r2))*100,4))+"%<br />"
             else:
-                Element("ergebnis").element.innerHTML += "P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(round(fdiff(n,p,r,r2)*100,4))+"%<br />"
+                Element("ergebnis").element.innerHTML = "P("+str(r1)+" ≤ X ≤ "+str(r2)+")="+str(round(fdiff(n,p,r,r2)*100,4))+"%<br />"
     
     if sigI:
         n = test("n")
         p = test("p")
         if (n != None) and (p != None):
             mu, sig = musig(n,p)
-            Element("ergebnis").element.innerHTML += "P<sub>σ</sub>("+str(math.ceil(mu-sig))+" ≤ X ≤ "+str(math.floor(mu+sig))+")="+str(round(sigmaP(1,n,p)*100,4))+"%<br />"
+            Element("ergebnis").element.innerHTML = "P<sub>σ</sub>("+str(math.ceil(mu-sig))+" ≤ X ≤ "+str(math.floor(mu+sig))+")="+str(round(sigmaP(1,n,p)*100,4))+"%<br />"
             Element("ergebnis").element.innerHTML += "P<sub>2σ</sub>("+str(math.ceil(mu-sig*2))+" ≤ X ≤ "+str(math.floor(mu+sig*2))+")="+str(round(sigmaP(2,n,p)*100,4))+"%<br />"
             Element("ergebnis").element.innerHTML += "P<sub>3σ</sub>("+str(math.ceil(mu-sig*3))+" ≤ X ≤ "+str(math.floor(mu+sig*3))+")="+str(round(sigmaP(3,n,p)*100,4))+"%<br />"
             Element("ergebnis").element.innerHTML += "P<sub>1.64σ</sub>("+str(math.ceil(mu-sig*1.64))+" ≤ X ≤ "+str(math.floor(mu+sig*1.64))+")="+str(round(sigmaP(1.64,n,p)*100,4))+"%<br />"
