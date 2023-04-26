@@ -74,6 +74,8 @@ def test(feld):
         else:
             if n>=0:
                 return n
+            else:
+                Element("ergebnis").element.innerHTML += "Bitte für n eine Zahl größer 0 eingeben.<br />"
         
     if feld == "p":
         try:
@@ -83,6 +85,8 @@ def test(feld):
         else:
             if 0<=p<=1:
                 return p
+            else:
+                Element("ergebnis").element.innerHTML += "Bitte für p eine Zahl zwischen 0 und 1 eingeben.<br />"
         
     if feld == "r":
         try:
@@ -90,7 +94,10 @@ def test(feld):
         except:
             Element("ergebnis").element.innerHTML += "Bitte für r eine natürliche Zahl eingeben.<br />"
         else:
-            return r
+            if r>=0:
+                return r
+            else:
+                Element("ergebnis").element.innerHTML += "Bitte für r eine Zahl größer 0 eingeben.<br />"
         
     if feld == "r2":
         try:
@@ -98,8 +105,11 @@ def test(feld):
         except:
             Element("ergebnis").element.innerHTML += "Bitte für r2 eine natürliche Zahl eingeben.<br />"
         else:
-            return r2
-    
+            if r2>=0:
+                return r2
+            else:
+                Element("ergebnis").element.innerHTML += "Bitte für r2 eine Zahl größer 0 eingeben.<br />"
+
     if feld == "r<=r2":
         if (r != None) and (r2 != None):
             if r<=r2:
