@@ -79,7 +79,7 @@ def test(feld,x="None",y="None"):
         
     if feld == "p":
         try:
-            p = float(Element("p").value)
+            p = float(Element("p").value.replace(",","."))
         except:
             Element("ergebnis").element.innerHTML += "Bitte für p eine reele Zahl zwischen 0 und 1 eingeben.<br />"
         else:
