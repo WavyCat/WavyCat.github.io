@@ -1,6 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@800&display=swap');
 
+body{
+    background:black;
+}
 .flex-container{
+    background:black;
     font-family: "Martel Sans";
     display:flex;
     justify-content: space-evenly;
@@ -12,7 +16,7 @@
 .flex-item {
     font-size: 150pt;
     text-align: center;
-    
+    color:white;
     padding: 0;
     margin: 0;
 }
@@ -20,6 +24,7 @@
 .flex-item1 {
     font-size: 150pt;
     text-align: center;
+    color:white;
     padding: 0;
-    margin-top: 330px;
+    margin-top: 350px;
 }
