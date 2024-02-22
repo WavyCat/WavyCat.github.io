@@ -1,9 +1,9 @@
 document.addEventListener('keydown', function(event) {
-    if (event.keyCode == 171) { //Plus
+    if (event.keyCode == 187) { //Plus
         document.getElementById("team1").innerHTML = (parseInt(document.getElementById("team1").innerHTML) + 1);
 
     }
-    else if (event.keyCode == 173) { //Minus
+    else if (event.keyCode == 189) { //Minus
         document.getElementById("team1").innerHTML = (parseInt(document.getElementById("team1").innerHTML) - 1);
     }
     else if (event.keyCode == 38) { //Hoch
