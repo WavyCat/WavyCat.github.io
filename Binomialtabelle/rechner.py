@@ -1,4 +1,5 @@
 import math
+import js
 
 def bin(n,k):
     nf = math.factorial(n)
@@ -278,3 +279,10 @@ def rechnen():
             Element("ergebnis").element.innerHTML += "P<sub>1.64σ</sub>="+str(round(sigmaP(1.64,n,p)*100,4))+"%<br />"
             Element("ergebnis").element.innerHTML += "P<sub>1.96σ</sub>="+str(round(sigmaP(1.96,n,p)*100,4))+"%<br />"
             Element("ergebnis").element.innerHTML += "P<sub>2.58σ</sub>="+str(round(sigmaP(2.58,n,p)*100,4))+"%<br />"
+
+js.rechnenNeu = rechnenNeu
+js.rechnen = rechnen
+js.test = test
+js.hidclick1 = hidclick1
+js.hidclick2 = hidclick2
+js.hidclick3 = hidclick3
