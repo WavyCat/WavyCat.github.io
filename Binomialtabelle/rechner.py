@@ -1,5 +1,6 @@
 import math
 import js
+from pyscript import Element
 
 def bin(n,k):
     nf = math.factorial(n)
